@@ -11,8 +11,7 @@ init_node() {
 		--network=$network \
 		--history-mode=archive \
 		--cors-origin='*' \
-		--cors-header 'Origin, X-Requested-With, Content-Type, Accept, Range' \
-		--force-history-mode-switch
+		--cors-header 'Origin, X-Requested-With, Content-Type, Accept, Range'
 	cat /home/tezos/.tezos-node/config.json
 }
 
