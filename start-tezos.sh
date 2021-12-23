@@ -1,6 +1,5 @@
 #!/bin/sh
 # Starts the Tezos node client
-# Written by Luke Youngblood, luke@blockscale.net
 
 init_node() {
 	tezos-node identity generate 26
@@ -9,9 +8,14 @@ init_node() {
 		--net-addr="[::]:$netport" \
 		--connections=$connections \
 		--network=$network \
-		--history-mode=archive \
+		--history-mode=full \
 		--cors-origin='*' \
 		--cors-header 'Origin, X-Requested-With, Content-Type, Accept, Range'
+	if [ $? -ne 0 ]
+	then
+		echo "Node failed to be configured; exiting."
+		exit 1
+	if
 	cat /home/tezos/.tezos-node/config.json
 }
 
