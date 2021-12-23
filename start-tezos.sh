@@ -11,12 +11,14 @@ init_node() {
 		--history-mode=full \
 		--cors-origin='*' \
 		--cors-header 'Origin, X-Requested-With, Content-Type, Accept, Range'
+
 	if [ $? -ne 0 ]
 	then
 		echo "Node failed to be configured; exiting."
 		exit 1
-	if
-	cat /home/tezos/.tezos-node/config.json
+	else
+		cat /home/tezos/.tezos-node/config.json
+	fi
 }
 
 start_node() {
