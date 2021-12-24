@@ -5,6 +5,7 @@ init_node() {
 	tezos-node identity generate 26
 	tezos-node config init "$@" \
 		--rpc-addr="[::]:$rpcport" \
+		--allow-all-rpc="[::]:$rpcport" \
 		--net-addr="[::]:$netport" \
 		--connections=$connections \
 		--network=$network \
