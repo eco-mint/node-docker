@@ -10,7 +10,7 @@ init_node() {
 		--network=$network \
 		--history-mode=full \
 		--cors-origin='*' \
-		--cors-header 'Origin, X-Requested-With, Content-Type, Accept, Range'
+		--cors-header 'content-type'
 
 	if [ $? -ne 0 ]
 	then
