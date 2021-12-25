@@ -59,7 +59,9 @@
           "GET/version",
           "POST/chains/*/blocks/*/context/contracts/*/big_map_get",
           "POST/chains/*/blocks/*/endorsing_power",
-          "POST/injection/operation"
+          "POST/injection/operation",
+          "POST/chains/*/blocks/*/context/seed",
+          "POST/chains/*/blocks/*/helpers/**"
         ]
       }
     ]
