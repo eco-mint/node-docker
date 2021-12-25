@@ -10,7 +10,8 @@ init_node() {
 		--allow-all-rpc="0.0.0.0:$rpcport" \
 		--net-addr="[::]:$netport" \
 		--connections=$connections \
-		--network=$network
+		--network=$network \
+		--history-mode=full
 
 	if [ $? -ne 0 ]
 	then
