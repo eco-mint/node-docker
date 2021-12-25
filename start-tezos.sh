@@ -3,7 +3,7 @@
 
 init_node() {
 	tezos-node identity generate 26
-	tezos-node config init "$@" \
+	tezos-node --config-file=/home/tezos/default-config.txt config init "$@" \
 		--rpc-addr="[::]:$rpcport" \
 		--allow-all-rpc="0.0.0.0:$rpcport" \
 		--net-addr="[::]:$netport" \
