@@ -2,7 +2,6 @@
   "rpc": {
     "listen-addrs": [
       "[::]:8732",
-      "127.0.0.1:8732"
     ],
     "cors-origin": [
       "*"
@@ -11,10 +10,6 @@
       "Origin, X-Requested-With, Content-Type, Accept, Range, GET, POST"
     ],
     "acl": [
-      {
-        "address": "127.0.0.1:8732",
-        "blacklist": []
-      },
       {
         "address": "0.0.0.0:8732",
         "whitelist": [
