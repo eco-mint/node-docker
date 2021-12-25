@@ -3,19 +3,22 @@
 
 init_node() {
 	tezos-node identity generate 26
-	rm -rf /home/tezos/.tezos-node/config.json
-	mv /home/tezos/config.json /home/tezos/.tezos-node/config.json
-	tezos-node config --config-file=/home/tezos/.tezos-node/config.json \
+	tezos-node config init "$@" \
 		--rpc-addr="[::]:$rpcport" \
 		--allow-all-rpc="0.0.0.0:$rpcport" \
 		--net-addr="[::]:$netport" \
 		--connections=$connections \
-		--network=$network
+		--network=$network \
+		--history-mode=full \
+		--cors-origin='*' \
+		--cors-header 'Origin, X-Requested-With, Content-Type, Accept, Range, GET, POST'
 
 	if [ $? -ne 0 ]
 	then
 		echo "Node failed to be configured; exiting."
 		exit 1
+	else
+		cat /home/tezos/.tezos-node/config.json
 	fi
 }
 
