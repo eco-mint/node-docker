@@ -6,6 +6,9 @@ init_node() {
 	rm -rf /home/tezos/.tezos-node/config.json
 	mv /home/tezos/config.json /home/tezos/.tezos-node/config.json
 	tezos-node config --config-file=/home/tezos/.tezos-node/config.json \
+		--rpc-addr="[::]:$rpcport" \
+		--allow-all-rpc="0.0.0.0:$rpcport" \
+		--net-addr="[::]:$netport" \
 		--connections=$connections \
 		--network=$network
 
