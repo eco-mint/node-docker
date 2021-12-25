@@ -14,8 +14,8 @@ RUN chmod 755 /home/tezos/start-tezos.sh
 COPY ./utc-time-math.py /home/tezos/utc-time-math.py
 RUN chmod 755 /home/tezos/utc-time-math.py
 
-COPY ./default-config.json /home/tezos/default-config.json
-RUN chmod 755 /home/tezos/default-config.json
+COPY ./default-config.json /home/tezos/.tezos-node/config.json
+RUN chmod 755 /home/tezos/.tezos-node/config.json
 
 USER tezos
 EXPOSE 8732 9732
