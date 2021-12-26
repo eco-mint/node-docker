@@ -63,7 +63,10 @@
           "POST/chains/*/blocks/*/context/seed",
           "POST/chains/*/blocks/*/helpers/forge_block_header",
           "POST/chains/*/blocks/*/helpers/preapply/block",
-          "POST/chains/*/blocks/*/helpers/preapply/operations"
+          "POST/chains/*/blocks/*/helpers/preapply/operations",
+          "POST/chains/*/blocks/*/helpers/*",
+          "POST/chains/*/blocks/*/helpers/**",
+          "POST/chains/main/blocks/head/helpers/scripts/simulate_operation"
         ]
       }
     ]
