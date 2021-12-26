@@ -4,7 +4,7 @@
 # if we are on mainnet, use known ACL config. on other networks we are lenient.
 init_node() {
 	tezos-node identity generate 26
-	if ["$network" = "mainnet" ]; then
+	if [[ $network == "mainnet" ]]; then
 		rm -rf /home/tezos/.tezos-node/config.json
 		mv /home/tezos/config.json /home/tezos/.tezos-node/config.json
 		tezos-node config --config-file=/home/tezos/.tezos-node/config.json \
