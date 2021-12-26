@@ -61,7 +61,9 @@
           "POST/chains/*/blocks/*/endorsing_power",
           "POST/injection/operation",
           "POST/chains/*/blocks/*/context/seed",
-          "POST/chains/*/blocks/*/helpers/**"
+          "POST/chains/*/blocks/*/helpers/forge_block_header",
+          "POST/chains/*/blocks/*/helpers/preapply/block",
+          "POST/chains/*/blocks/*/helpers/preapply/operations"
         ]
       }
     ]
