@@ -64,9 +64,16 @@
           "POST/chains/*/blocks/*/helpers/forge_block_header",
           "POST/chains/*/blocks/*/helpers/preapply/block",
           "POST/chains/*/blocks/*/helpers/preapply/operations",
-          "POST/chains/*/blocks/*/helpers/*",
-          "POST/chains/*/blocks/*/helpers/**",
-          "POST/chains/main/blocks/head/helpers/scripts/simulate_operation"
+          "GET/chains/*/blocks/*/helpers/baking_rights",
+          "GET/chains/*/blocks/*/helpers/endorsing_rights",
+          "GET/chains/*/blocks/*/helpers/levels_in_current_cycle",
+          "POST/chains/*/blocks/*/helpers/forge/operations",
+          "POST/chains/*/blocks/*/helpers/preapply/*",
+          "POST/chains/*/blocks/*/helpers/scripts/run_operation",
+          "POST/chains/*/blocks/*/helpers/scripts/simulate_operation",
+          "POST/chains/*/mempool/request_operations",
+          "POST/injection/block",
+          "POST/injection/protocol"
         ]
       }
     ]
