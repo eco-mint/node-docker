@@ -8,16 +8,16 @@ init_node() {
 		rm -rf /home/tezos/.tezos-node/config.json
 		mv /home/tezos/config.json /home/tezos/.tezos-node/config.json
 		tezos-node config --config-file=/home/tezos/.tezos-node/config.json \
-			--rpc-addr="[::]:$rpcport" \
-			--net-addr="[::]:$netport" \
+			--rpc-addr="0.0.0.0:$rpcport" \
+			--net-addr="0.0.0.0:$netport" \
 			--connections=$connections \
 			--network=$network \
 			--history-mode=full
 	else
 		tezos-node config init "$@" \
-			--rpc-addr="[::]:$rpcport" \
+			--rpc-addr="0.0.0.0:$rpcport" \
 			--allow-all-rpc="0.0.0.0:$rpcport" \
-			--net-addr="[::]:$netport" \
+			--net-addr="0.0.0.0:$netport" \
 			--connections=$connections \
 			--network=$network \
 			--history-mode=full \
