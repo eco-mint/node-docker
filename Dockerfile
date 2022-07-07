@@ -1,4 +1,4 @@
-FROM tezos/tezos:13.0
+FROM tezos/tezos:v13.0
 
 # Install AWS CLI
 
