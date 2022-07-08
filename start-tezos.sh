@@ -7,7 +7,7 @@ init_node() {
 	if [[ $network == "mainnet" ]]; then
 		rm -rf /home/tezos/.tezos-node/config.json
 		mv /home/tezos/config.json /home/tezos/.tezos-node/config.json
-		tezos-node config init && tezos-node config update --config-file=/home/tezos/.tezos-node/config.json \
+		tezos-node config reset && tezos-node config update --config-file=/home/tezos/.tezos-node/config.json \
 			--rpc-addr="0.0.0.0:$rpcport" \
 			--net-addr="0.0.0.0:$netport" \
 			--connections=$connections \
