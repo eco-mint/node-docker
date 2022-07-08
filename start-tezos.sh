@@ -6,8 +6,10 @@ init_node() {
 	tezos-node identity generate 26
 	if [[ $network == "mainnet" ]]; then
 		rm -rf /home/tezos/.tezos-node/config.json
+		tezos-node config init
 		mv /home/tezos/config.json /home/tezos/.tezos-node/config.json
-		tezos-node config reset && tezos-node config update --config-file=/home/tezos/.tezos-node/config.json \
+		tezos-node config show
+		tezos-node config update --config-file=/home/tezos/.tezos-node/config.json \
 			--rpc-addr="0.0.0.0:$rpcport" \
 			--net-addr="0.0.0.0:$netport" \
 			--connections=$connections \
